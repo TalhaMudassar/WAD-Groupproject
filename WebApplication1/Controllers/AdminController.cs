@@ -52,13 +52,13 @@ namespace WebApplication1.Controllers
                     string extension = Path.GetExtension(ImageFile.FileName);
                     fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
 
-                    // Define the path where the image will be saved
+                    // path where we save the image 
                     string imagePath = Path.Combine(Server.MapPath("~/Images/"), fileName);
 
-                    // Save the image to the server
+                  
                     ImageFile.SaveAs(imagePath);
 
-                    // Store the relative path in the database
+                  
                     product.ImagePath = "~/Images/" + fileName;
                 }
 
