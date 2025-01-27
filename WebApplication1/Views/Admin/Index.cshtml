@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication1.Models.Products>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<div style="background-color: pink; padding: 20px;">
+    <h2>Products</h2>
+    <p>
+        <a href="/Admin/AddProduct" class="btn btn-primary">Add New Product</a>
+    </p>
+
+    <table border="1" style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@Url.Content(item.ImagePath)" alt="Product Image" style="max-width: 100px; max-height: 100px;" />
+                    }
+                </td>
+                <td>
+                    <a href="/Admin/EditProduct/@item.Id" class="btn btn-warning">Edit</a>
+                    <a href="/Admin/DeleteProduct/@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

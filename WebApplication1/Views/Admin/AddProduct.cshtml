@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.Products
+
+@{
+    ViewBag.Title = "Add Product";
+}
+
+<div style="background-color: lightblue; padding: 20px;">
+    <h2>Add Product</h2>
+    <form action="/Admin/AddProduct" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div>
+            <label>Name:</label>
+            <input type="text" name="Name" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Name, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Description:</label>
+            <textarea name="Description" class="form-control"></textarea>
+            @Html.ValidationMessageFor(model => model.Description, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Price:</label>
+            <input type="text" name="Price" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Price, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Stock:</label>
+            <input type="text" name="Stock" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Stock, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Image:</label>
+            <input type="file" name="ImageFile" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>

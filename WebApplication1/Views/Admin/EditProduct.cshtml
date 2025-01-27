@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.Products
+
+@{
+    ViewBag.Title = "Edit Product";
+}
+
+<div style="background-color: lightgreen; padding: 20px;">
+    <h2>Edit Product</h2>
+    <form action="/Admin/EditProduct" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <!-- Hidden field for Product ID -->
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div>
+            <label>Name:</label>
+            <input type="text" name="Name" value="@Model.Name" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Name, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Description:</label>
+            <textarea name="Description" class="form-control">@Model.Description</textarea>
+            @Html.ValidationMessageFor(model => model.Description, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Price:</label>
+            <input type="text" name="Price" value="@Model.Price" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Price, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Stock:</label>
+            <input type="text" name="Stock" value="@Model.Stock" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Stock, "", new { style = "color: red;" })
+        </div>
+
+        <div>
+            <label>Image:</label>
+            <input type="file" name="ImageFile" />
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <img src="@Url.Content(Model.ImagePath)" alt="Product Image" style="max-width: 200px; max-height: 200px;" />
+            }
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
