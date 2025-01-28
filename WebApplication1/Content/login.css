@@ -1,0 +1,121 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background with gradient animation */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    animation: gradientBG 10s infinite alternate;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% { background: linear-gradient(135deg, #667eea, #764ba2); }
+    100% { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.login-container:hover {
+    transform: scale(1.05);
+}
+
+/* Heading */
+.login-container h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Input Focus */
+input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    background: #ff758c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #ff7eb3;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Register Link */
+.register-link p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.register-link a:hover {
+    color: #ffeb3b;
+}
