@@ -19,9 +19,11 @@ body {
     backdrop-filter: blur(10px);
     width: 350px;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    transition: transform 0.3s ease-in-out;
 }
+    .login-container:hover {
+        transform: scale(1.05);
+    }
 
     /* Input Styling */
     .login-container input {
