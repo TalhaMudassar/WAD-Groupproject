@@ -96,7 +96,9 @@
   <ItemGroup>
     <Content Include="Content\Images\AA-logo.png" />
     <Content Include="Content\Images\pexels-jeys-tubianosa-1222150-3538010.jpg" />
+    <Content Include="Content\Images\pexels-whynugrohou-3119215.jpg" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />

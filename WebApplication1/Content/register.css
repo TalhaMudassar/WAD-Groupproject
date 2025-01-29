@@ -10,8 +10,8 @@ body {
     flex-direction: column;
 }
 
-/* Center the login form */
-.login-container {
+/* Center the register form */
+.register-container {
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 10px;
@@ -21,12 +21,13 @@ body {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-    .login-container:hover {
+
+    .register-container:hover {
         transform: scale(1.05);
     }
 
     /* Input Styling */
-    .login-container input {
+    .register-container input {
         width: 100%;
         padding: 12px;
         margin: 10px 0;
@@ -35,8 +36,8 @@ body {
         outline: none;
     }
 
-    /* Login Button Styling */
-    .login-container button {
+    /* register Button Styling */
+    .register-container button {
         width: 100%;
         padding: 12px;
         background: #ff6b81;
@@ -47,7 +48,7 @@ body {
         cursor: pointer;
     }
 
-        .login-container button:hover {
+        .register-container button:hover {
             background: #ff4757;
         }
 
@@ -60,7 +61,7 @@ body {
     width: 100%;
 }
 /* Centering the input tags inside the form */
-.login-container input {
+.register-container input {
     display: block; /* Make sure inputs are block-level elements */
     margin: 10px auto; /* Auto margin to center them horizontally */
     width: 80%; /* Adjust the width as per your requirement */
@@ -71,7 +72,7 @@ body {
 }
 
 /* Optional: If you want the button to be centered as well */
-.login-container button {
+.register-container button {
     margin-top: 10px;
     width: 80%; /* Match the width of the inputs */
     padding: 12px;
@@ -83,6 +84,6 @@ body {
     cursor: pointer;
 }
 
-    .login-container button:hover {
+    .register-container button:hover {
         background: #ff4757;
     }
