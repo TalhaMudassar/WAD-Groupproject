@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Cart";
+}
+
+<!-- Link to the CSS file -->
+<link href="~/Content/Cart.css" rel="stylesheet" />
+
+<div class="cart-container">
+    <h2>Shopping Cart</h2>
+
+    <!-- Display success message if any -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="success-message">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.Price</td>
+                        <td>@(item.Quantity * item.Price)</td>
+                        <td>
+                            <a href="@Url.Action("RemoveFromCart", "Home", new { id = item.ProductId })" class="remove-button">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h4>Total: @Model.Sum(c => c.Quantity * c.Price)</h4>
+            <div class="cart-actions">
+                <a href="@Url.Action("Checkout", "Home")" class="checkout-button">Proceed to Checkout</a>
+                <a href="@Url.Action("Index", "Home")" class="continue-shopping-button">Continue Shopping</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="empty-cart-message">Your cart is empty.</p>
+        <a href="@Url.Action("Index", "Home")" class="continue-shopping-button">Continue Shopping</a>
+    }
+</div>
+

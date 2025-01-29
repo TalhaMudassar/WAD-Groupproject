@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Checkout.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <p>Your order has been placed successfully!</p>
+        <a href="@Url.Action("Index", "Home")" class="continue-shopping-btn">Continue Shopping</a>
+    </div>
+</body>
+</html>
+
