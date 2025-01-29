@@ -94,7 +94,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\img\shirt1.png" />
+    <Content Include="Content\Images\AA-logo.png" />
+    <Content Include="Content\Images\pexels-jeys-tubianosa-1222150-3538010.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />

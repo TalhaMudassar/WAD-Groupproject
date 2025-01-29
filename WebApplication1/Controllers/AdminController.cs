@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Razor.Generator;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -45,22 +46,27 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (ImageFile != null && ImageFile.ContentLength > 0)
+                string folderPath = Server.MapPath("~/Images/");
+                if (!Directory.Exists(folderPath))
                 {
+                    Directory.CreateDirectory(folderPath);
+                }
+                //if (ImageFile != null && ImageFile.ContentLength > 0)
+                //{
                     // Generate a unique file name
                     string fileName = Path.GetFileNameWithoutExtension(ImageFile.FileName);
                     string extension = Path.GetExtension(ImageFile.FileName);
                     fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
 
                     // path where we save the image 
-                    string imagePath = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                    string imagePath = Path.Combine(folderPath, fileName);
 
                   
                     ImageFile.SaveAs(imagePath);
 
                   
                     product.ImagePath = "~/Images/" + fileName;
-                }
+               // }
 
                 _context.Products.Add(product);
                 _context.SaveChanges();
