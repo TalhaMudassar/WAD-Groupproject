@@ -1,102 +1,90 @@
-.container {
-    width: 100%;
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .cart-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
-    font-size: 2em;
-    color: #333;
+    margin-bottom: 20px;
+    color: #6e8efb;
 }
 
 .success-message {
+    padding: 15px;
     background-color: #d4edda;
     color: #155724;
-    padding: 15px;
-    margin-bottom: 20px;
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     text-align: center;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
+    table thead tr {
+        background-color: #6e8efb;
+        color: #fff;
+    }
 
-table th {
-    background-color: #f4f4f4;
-}
-
-table td a.remove-button {
-    color: #ff0000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-table td a.remove-button:hover {
-    text-decoration: underline;
-}
+    table th,
+    table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
 
 .cart-summary {
     text-align: right;
     margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
 }
+
+    .cart-summary h4 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #333;
+    }
 
 .cart-actions {
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+    text-align: right;
 }
 
-.cart-actions a {
+.checkout-button,
+.continue-shopping-button,
+.remove-button {
+    background-color: #ff6b81;
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
 }
 
-.checkout-button {
-    background-color: #28a745;
-    color: white;
-}
-
-.checkout-button:hover {
-    background-color: #218838;
-}
-
-.continue-shopping-button {
-    background-color: #007bff;
-    color: white;
-}
-
-.continue-shopping-button:hover {
-    background-color: #0056b3;
-}
+    .checkout-button:hover,
+    .continue-shopping-button:hover,
+    .remove-button:hover {
+        background-color: #ff4757;
+    }
 
 .empty-cart-message {
-    font-size: 1.2em;
-    color: #555;
     text-align: center;
-    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
 }

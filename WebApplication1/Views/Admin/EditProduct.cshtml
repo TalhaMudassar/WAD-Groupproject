@@ -1,9 +1,10 @@
 ﻿@model WebApplication1.Models.Products
 
 @{
+    Layout = null;
     ViewBag.Title = "Edit Product";
 }
-
+<link href="~/Content/editproduct.css" rel="stylesheet" />
 <div style="background-color: lightgreen; padding: 20px;">
     <h2>Edit Product</h2>
     <form action="/Admin/EditProduct" method="post" enctype="multipart/form-data">
@@ -45,6 +46,12 @@
             }
         </div>
 
+
+
         <button type="submit" class="btn btn-primary">Save Changes</button>
+
+
+
+
     </form>
 </div>

@@ -94,10 +94,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\addproduct.css" />
+    <Content Include="Content\Cart.css" />
+    <Content Include="Content\Checkout.css" />
+    <Content Include="Content\editproduct.css" />
+    <Content Include="Content\Homeindex.css" />
     <Content Include="Content\Images\AA-logo.png" />
     <Content Include="Content\Images\pexels-jeys-tubianosa-1222150-3538010.jpg" />
     <Content Include="Content\Images\pexels-whynugrohou-3119215.jpg" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\orderConfirmation.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
@@ -125,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Content\adminindex.css" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

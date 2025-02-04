@@ -1,22 +1,16 @@
-﻿
+﻿@model List<WebApplication1.Models.OrderItems>
 @{
-    ViewBag.Title = "Cart";
+    ViewBag.Title = "Shopping Cart";
 }
-
-<!-- Link to the CSS file -->
 <link href="~/Content/Cart.css" rel="stylesheet" />
-
 <div class="cart-container">
     <h2>Shopping Cart</h2>
-
-    <!-- Display success message if any -->
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="success-message">
             @TempData["SuccessMessage"]
         </div>
     }
-
     @if (Model != null && Model.Any())
     {
         <table>
@@ -58,4 +52,3 @@
         <a href="@Url.Action("Index", "Home")" class="continue-shopping-button">Continue Shopping</a>
     }
 </div>
-

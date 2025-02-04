@@ -1,0 +1,126 @@
+﻿body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: inline-block;
+}
+
+.brand-logo {
+  max-width: 150px;
+}
+
+.login-link {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  color: #6e8efb;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #6e8efb;
+  color: #fff;
+}
+
+.product-image {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+.action-buttons a {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}

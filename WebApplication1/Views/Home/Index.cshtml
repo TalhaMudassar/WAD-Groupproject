@@ -1,37 +1,32 @@
-﻿
-@{
+﻿@{
+    Layout = null;
     ViewBag.Title = "Index";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Homeindex.css" rel="stylesheet" />
 </head>
 <body>
+ 
     <div class="home-container">
         <h2>Products</h2>
-
-        <!-- Display success message if any -->
         @if (TempData["SuccessMessage"] != null)
         {
             <div class="alert alert-success">
                 @TempData["SuccessMessage"]
             </div>
         }
-
-        <!-- Display error message if any -->
         @if (TempData["ErrorMessage"] != null)
         {
             <div class="alert alert-danger">
                 @TempData["ErrorMessage"]
             </div>
         }
-
         <div class="product-list">
             @foreach (var product in Model)
             {
@@ -44,8 +39,6 @@
                     <p class="product-description">@product.Description</p>
                     <p class="product-price"><strong>Price:</strong> $@product.Price</p>
                     <p class="product-stock"><strong>Stock:</strong> @product.Stock</p>
-
-                    <!-- Disable "Add to Cart" button if stock is 0 -->
                     @if (product.Stock <= 0)
                     {
                         <button class="btn btn-out-of-stock" disabled>Out of Stock</button>
@@ -57,12 +50,14 @@
                 </div>
             }
         </div>
-
-        <!-- Add a button to proceed to the cart -->
         <div class="cart-button-container">
             <a href="@Url.Action("Cart", "Home")" class="btn btn-view-cart">View Cart</a>
         </div>
+        <div class="login-link">
+            <a href="@Url.Action("Login", "Account")" class="btn btn-login">Back to Login</a>
+        </div>
     </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
-
